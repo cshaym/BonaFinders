@@ -1,0 +1,74 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+@{ <video id="videoBG" poster="/Content/assets/poster.PNG" autoplay muted> <source src="~/Content/assets/backgroundVid.mp4" type="video/mp4"></video> }
+
+<div class="jumbotron">
+    <h1 class="heading-font BF-font">Bona Finders <i class="fas fa-globe-americas"></i></h1>
+    <p class="lead bold-main-font">Bona Finders is an application for users to share and learn information about individual company and business ethics so that they can shop with ease of mind about who their dollar is supporting. Let's encourage society to lean towards better conduct together!</p>
+
+        <div id="bonaSlideshow" class="carousel slide" data-ride="carousel">
+               <div class="carousel-inner">
+                   <div class="item active">
+                       <img class="bona-img" style="height: 300px; width: 600px;" src="~/Content/assets/a.PNG" alt="First slide">
+                   </div>
+                   <div class="item">
+                       <img class="bona-img" style="height: 300px; width: 600px;" src="~/Content/assets/c.PNG" alt="Second slide">
+                   </div>
+                   <div class="item">
+                       <img class="bona-img" style="height: 300px; width: 600px;" src="~/Content/assets/f.PNG" alt="Third slide">
+                   </div>
+                   <div class="item">
+                       <img class="bona-img" style="height: 300px; width: 600px;" src="~/Content/assets/e.PNG" alt="Fourth slide">
+                   </div>
+                   <div class="item">
+                       <img class="bona-img" style="height: 300px; width: 600px;" src="~/Content/assets/b.PNG" alt="Fifth slide">
+                   </div>
+               </div>
+        </div>
+
+    <p class="bold-main-font">@Html.ActionLink("Learn More", "About", "Home", null, new { @class = "btn btn-primary btn-md" })</p>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <h2 class="bold-main-font index-text">Ethical Organizations</h2>
+        <p class="bold-main-font index-text size-text">Here you will find a list of organizations that have been researched in order to bring their ethical company and business morals to light. Feel free to add to the list after doing thorough research, delete, update, or view more information.</p>
+        @if (User.Identity.IsAuthenticated) { 
+        <p class="bold-main-font" align="center">@Html.ActionLink("Add an Ethical Organization", "Create", "Ethical", null, new { @class = "btn btn-default" })</p>}
+    </div>
+
+    <div class="col-md-6">
+        <h2 class="bold-main-font index-text">Unethical Organizations</h2>
+        <p class="bold-main-font index-text size-text">Here you will find a list of organizations that have been researched in order to bring their unethical company and business morals to light. Feel free to add to the list after doing thorough research, delete, update, or view more information.</p>
+        @if (User.Identity.IsAuthenticated) { 
+        <p class="bold-main-font" align="center">@Html.ActionLink("Add an Unethical Organization", "Create", "Unethical", null, new { @class = "btn btn-default" })</p>}
+    </div>
+
+</div>
+
+<br />
+<div class="row">
+    <div class="col col-md-2"></div>
+    <div class="col-md-8 col-md-auto">
+        <h2 class="bold-main-font index-text">Tips</h2>
+        <p class="bold-main-font index-text size-text">Here you can browse tips from other consumers based on their personal journeys with learning to become more aware of ethics, how to do proper research before purchasing or judging a company, and more! Feel free to add your own tips as well!</p>
+        @if (User.Identity.IsAuthenticated) { 
+        <p class="bold-main-font" align="center">@Html.ActionLink("Add a Tip", "Create", "Tip", null, new { @class = "btn btn-default" })</p>}
+    </div>
+    <div class="col col-md-2"></div>
+</div>
+
+<br />
+<div class="row review-mobile">
+    <div class="col col-md-2"></div>
+    <div class="col-md-8 col-md-auto">
+        <h2 class="bold-main-font index-text">Reviews</h2>
+        <p class="bold-main-font index-text size-text">Here you can browse reviews from other consumers based on their personal experiences with specific businesses and more! Feel free to add your own reviews as well!</p>
+        @if (User.Identity.IsAuthenticated) { 
+        <p class="bold-main-font" align="center">@Html.ActionLink("Review an Ethical Organization", "Create", "EthicalReview", null, new { @class = "btn btn-default" })</p>
+        <p class="bold-main-font" align="center">@Html.ActionLink("Review an Unethical Organization", "Create", "UnethicalReview", null, new { @class = "btn btn-default" })</p>}
+    </div>
+    <div class="col col-md-2"></div>
+</div>

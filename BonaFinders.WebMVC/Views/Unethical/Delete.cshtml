@@ -1,0 +1,85 @@
+﻿@model BonaFinders.Data.Entities.UnethicalOrganization
+
+@{
+    ViewBag.Title = "Delete";
+}
+@{
+    <img class="imageBG" src="~/Content/assets/greenblur.PNG">
+}
+
+<div class="body-content form-style">
+    <h2 class="heading-font">Are you sure you want to delete this Unethical Organization?</h2>
+    <div>
+        
+        <hr />
+
+        <dl class="dl-horizontal bold-main-font form-content">
+            <dt class="ListItemStyleL">
+                @Html.DisplayNameFor(model => model.UnethicalOrganizationName)
+            </dt>
+
+            <dd class="ListItemStyleR">
+                @Html.DisplayFor(model => model.UnethicalOrganizationName)
+            </dd>
+            <hr />
+            <dt>
+                @Html.DisplayNameFor(model => model.FastFashion)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.FastFashion)
+            </dd>
+            <hr />
+            <dt>
+                @Html.DisplayNameFor(model => model.Exploitation)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Exploitation)
+            </dd>
+            <hr />
+            <dt>
+                @Html.DisplayNameFor(model => model.Sweatshop)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Sweatshop)
+            </dd>
+            <hr />
+            <dt>
+                @Html.DisplayNameFor(model => model.Copyright)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Copyright)
+            </dd>
+            <hr />
+            <dt class="ListItemStyleL">
+                @Html.DisplayNameFor(model => model.UCountry)
+            </dt>
+
+            <dd class="ListItemStyleR">
+                @Html.DisplayFor(model => model.UCountry)
+            </dd>
+            <hr />
+            <dt class="ListItemStyleL">
+                @Html.DisplayNameFor(model => model.UImprove)
+            </dt>
+
+            <dd class="ListItemStyleR">
+                @Html.DisplayFor(model => model.UImprove)
+            </dd>
+            <hr />
+        </dl>
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-actions no-color bold-main-font shadow-text">
+                <input type="submit" value="Delete" class="btn btn-default" /> |
+                @Html.ActionLink("Back to List", "Index")
+            </div>
+        }
+    </div>
+</div>

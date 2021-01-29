@@ -1,0 +1,49 @@
+﻿@model BonaFinders.Models.UnethicalReviewModels.URDetail
+
+@{
+    ViewBag.Title = "Delete";
+}
+@{
+    <img class="imageBG" src="~/Content/assets/greenblur.PNG">
+}
+
+<div class="body-content form-style">
+    <h2 class="heading-font">Are you sure you want to delete this Review?</h2>
+    <div>
+
+        <hr />
+
+        <dl class="dl-horizontal bold-main-font form-content">
+            <dt class="detail-tr">
+                @Html.DisplayNameFor(model => model.UnethicalReviewTitle)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.UnethicalReviewTitle)
+            </dd>
+
+            <hr />
+
+            <dt class="detail-tr">
+                @Html.DisplayNameFor(model => model.UnethicalReviewText)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.UnethicalReviewText)
+            </dd>
+
+            <hr />
+
+        </dl>
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-actions no-color bold-main-font shadow-text">
+                <input type="submit" value="Delete" class="btn btn-default" /> |
+                @Html.ActionLink("Back to List", "Index")
+            </div>
+        }
+    </div>
+</div>

@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30413.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BonaFinders.WebMVC", "BonaFinders.WebMVC\BonaFinders.WebMVC.csproj", "{B7AD8375-44B7-4EFF-AB3F-BFF9E4B1F14D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BonaFinders.Data", "BonaFinders.Data\BonaFinders.Data.csproj", "{1EFD5521-57EA-4A22-B555-ED2D814D5A44}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BonaFinders.Models", "BonaFinders.Models\BonaFinders.Models.csproj", "{D59F373E-EC87-4204-9901-05839073C393}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BonaFinders.Services", "BonaFinders.Services\BonaFinders.Services.csproj", "{2C478410-E2AA-4D9D-B700-0D6EF0CF0370}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{86F3ED19-2BF5-42F5-810C-B1297497C4DA}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B7AD8375-44B7-4EFF-AB3F-BFF9E4B1F14D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7AD8375-44B7-4EFF-AB3F-BFF9E4B1F14D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7AD8375-44B7-4EFF-AB3F-BFF9E4B1F14D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7AD8375-44B7-4EFF-AB3F-BFF9E4B1F14D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1EFD5521-57EA-4A22-B555-ED2D814D5A44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EFD5521-57EA-4A22-B555-ED2D814D5A44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EFD5521-57EA-4A22-B555-ED2D814D5A44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EFD5521-57EA-4A22-B555-ED2D814D5A44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D59F373E-EC87-4204-9901-05839073C393}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D59F373E-EC87-4204-9901-05839073C393}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D59F373E-EC87-4204-9901-05839073C393}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D59F373E-EC87-4204-9901-05839073C393}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C478410-E2AA-4D9D-B700-0D6EF0CF0370}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C478410-E2AA-4D9D-B700-0D6EF0CF0370}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C478410-E2AA-4D9D-B700-0D6EF0CF0370}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C478410-E2AA-4D9D-B700-0D6EF0CF0370}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {54073A23-17DA-4A8C-BF90-D851F7BA41AE}
+	EndGlobalSection
+EndGlobal

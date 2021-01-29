@@ -1,0 +1,62 @@
+﻿@model IEnumerable<BonaFinders.Models.UnethicalReviewModels.URListItem>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+@{<img class="imageBG" src="~/Content/assets/greenblur.PNG">}
+
+<div class="body-content table-responsive">
+    <h2 class="heading-font">List of Unethical Organization Reviews</h2>
+
+    @if (User.Identity.IsAuthenticated) { 
+    <p class="bold-main-font shadow-text">@Html.ActionLink("Add a Review", "Create")</p>}
+
+    @if (TempData.ContainsKey("SaveResult"))
+    {
+        <div class="alert alert-success fade in" role="alert">
+            @ViewBag.SaveResult
+            <button type="button" class="close" data-dismiss="alert">
+                <span>&times;</span>
+            </button>
+            @TempData["SaveResult"]
+        </div>
+    }
+
+    <table class="table table-striped table-hover bold-main-font">
+        <tr class="top-border">
+            <th>
+                @Html.DisplayNameFor(model => model.OrganizationName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UnethicalReviewTitle)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UnethicalReviewText)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OrganizationName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UnethicalReviewTitle)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UnethicalReviewText)
+                </td>
+                @*<td>
+                        @Html.ActionLink("Change", "Edit", new { id = item.UnethicalReviewId }) |
+                        @Html.ActionLink("More Info", "Details", new { id = item.UnethicalReviewId }) |
+                        @Html.ActionLink("Remove", "Delete", new { id = item.UnethicalReviewId })
+                    </td>*@
+            </tr>
+        }
+    </table>
+
+</div>
+

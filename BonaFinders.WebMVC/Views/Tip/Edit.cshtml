@@ -1,0 +1,47 @@
+﻿@model BonaFinders.Models.TipModels.TEdit
+
+@{ViewBag.Title = "Edit";}
+@{<img class="imageBG" src="~/Content/assets/greenblur.PNG">}
+
+<div class="body-content form-style">
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal">
+            <h2 class="heading-font">Edit this Tip</h2>
+
+            <div class="form-content">
+                <hr />
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                @Html.HiddenFor(model => model.TipId)
+
+                <div class="form-group bold-main-font">
+                    @Html.LabelFor(model => model.Title, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Title, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Title, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group bold-main-font">
+                    @Html.LabelFor(model => model.Text, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Text, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Text, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group bold-main-font">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Save" class="btn btn-default" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+
+    <div class="bold-main-font shadow-text">
+        @Html.ActionLink("Back to List", "Index")
+    </div>
+</div>

@@ -1,0 +1,41 @@
+﻿@model BonaFinders.Models.TipModels.TDetail
+
+@{
+    ViewBag.Title = "Details";
+}
+@{
+    <img class="imageBG" src="~/Content/assets/greenblur.PNG">
+}
+
+<div class="body-content form-style table-responsive">
+
+    <div class="dl-horizontal">
+        <h2 class="heading-font">Tip Details</h2>
+        <hr />
+
+            <table class="bold-main-font table table-detail form-content table-bordered">
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Title)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Text)
+                    </th>
+                </tr>
+
+                <tr>
+                    <th>
+                        @Html.DisplayFor(model => model.Title)
+                    </th>
+                    <th>
+                        @Html.DisplayFor(model => model.Text)
+                    </th>
+                </tr>
+            </table>
+
+            <p class="bold-main-font shadow-text">
+                @Html.ActionLink("Back to List", "Index")
+            </p>
+    </div>
+
+</div>
